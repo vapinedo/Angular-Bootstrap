@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-primary" (click)="toggleModal()" data-bs-toggle="modal"
+    data-bs-target="#sampleModal">
+    Open Dialog
+</button>
+
+
+<div *ngIf="isOpenModal" class="animate__animated animate__fadeIn">
+    <div id="sampleModal" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel" class="modal fade show"
+        aria-modal="true" style="display: block;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dialog title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis libero, illo exercitationem tempora beatae sunt,
+                    recusandae optio atque consequatur a reprehenderit quibusdam commodi totam.
+                    Ab sint corporis doloremque distinctio repellat?
+                </div>
+                <div class="modal-footer">
+                    <button (click)="toggleModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+</div>
